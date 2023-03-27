@@ -1,0 +1,6 @@
+framework module Pods_PizzApp_ {
+  umbrella header "Pods-PizzApp!-umbrella.h"
+
+  export *
+  module * { export * }
+}
