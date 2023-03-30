@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pFX-f9-sAV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l8X-qu-ECI">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -37,23 +37,52 @@
             </objects>
             <point key="canvasLocation" x="-40.458015267175568" y="21.83098591549296"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="42C-MG-HTa">
             <objects>
-                <viewController id="gMU-MX-QsZ" sceneMemberID="viewController">
+                <viewController id="gMU-MX-QsZ" customClass="RecipeViewController" customModule="PizzApp_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veH-YH-5VZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nK0-pB-Boz">
+                                <rect key="frame" x="76" y="549" width="241" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="nou-05-iWO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmd-Xe-sOB">
+                                <rect key="frame" x="163" y="247" width="66.333333333333329" height="33.666666666666657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnH-Gg-ycd">
+                                <rect key="frame" x="161" y="339" width="70" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done!"/>
+                                <connections>
+                                    <action selector="stepOfRecipeDone:" destination="gMU-MX-QsZ" eventType="touchUpInside" id="std-zc-uxe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kfQ-TI-Crd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="RAn-dJ-hjT"/>
+                    <connections>
+                        <outlet property="doneButton" destination="gnH-Gg-ycd" id="ecO-hx-Fti"/>
+                        <outlet property="recipeImage" destination="nK0-pB-Boz" id="W5e-JZ-fbL"/>
+                        <outlet property="recipeLabel" destination="jmd-Xe-sOB" id="OQa-7l-Skd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq2-g5-mSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1738" y="727"/>
+            <point key="canvasLocation" x="-1738.1679389312976" y="726.76056338028172"/>
         </scene>
-        <!--Start View Controller-->
+        <!--Your own delicious pizza in 7 steps!-->
         <scene sceneID="7pX-EK-UJg">
             <objects>
                 <viewController id="pFX-f9-sAV" customClass="StartViewController" customModule="PizzApp_" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,39 +90,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PizzApp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbX-UA-zfb" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="96" y="366" width="201" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PizzApp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbX-UA-zfb" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="131.66666666666669" y="405.66666666666669" width="129.66666666666669" height="40.666666666666686"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PizzApp!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV0-rV-07r" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="charInterval">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SBq-eO-AL2">
-                                <rect key="frame" x="159" y="724.33333333333337" width="75" height="88.666666666666629"/>
+                                <rect key="frame" x="132.33333333333331" y="724.33333333333337" width="128.33333333333331" height="88.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apf-rr-aaC">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128.33333333333334" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Shopping List"/>
                                         <connections>
                                             <segue destination="I9Q-hV-He8" kind="show" identifier="goToShoppingList" id="WNd-ge-2cs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-RX-FFB">
-                                        <rect key="frame" x="0.0" y="54.333333333333258" width="75" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="54.333333333333258" width="128.33333333333334" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Making Pizza"/>
                                         <connections>
                                             <segue destination="gMU-MX-QsZ" kind="show" identifier="goToMakingPizza" id="8Qu-kg-pp3"/>
                                         </connections>
@@ -104,13 +121,15 @@
                         <viewLayoutGuide key="safeArea" id="2L5-mh-eLZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gV0-rV-07r" firstAttribute="centerY" secondItem="Zka-jg-Ork" secondAttribute="centerY" id="2SJ-jZ-4sz"/>
+                            <constraint firstItem="DbX-UA-zfb" firstAttribute="centerX" secondItem="Zka-jg-Ork" secondAttribute="centerX" id="GsP-vQ-RSb"/>
                             <constraint firstItem="2L5-mh-eLZ" firstAttribute="bottom" secondItem="SBq-eO-AL2" secondAttribute="bottom" constant="5" id="Ilo-hI-wJx"/>
-                            <constraint firstItem="gV0-rV-07r" firstAttribute="centerX" secondItem="Zka-jg-Ork" secondAttribute="centerX" id="Pk2-sE-Cjs"/>
                             <constraint firstItem="SBq-eO-AL2" firstAttribute="centerX" secondItem="Zka-jg-Ork" secondAttribute="centerX" id="bmk-26-Hu5"/>
+                            <constraint firstItem="DbX-UA-zfb" firstAttribute="centerY" secondItem="Zka-jg-Ork" secondAttribute="centerY" id="xaC-TL-dHq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hmM-GF-cNP"/>
+                    <navigationItem key="navigationItem" title="Your own delicious pizza in 7 steps!" id="hmM-GF-cNP">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="xR8-HS-hMo"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="myTypeWriterLabel" destination="DbX-UA-zfb" id="5fv-YE-6Sy"/>
                     </connections>
@@ -139,8 +158,9 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="DbX-UA-zfb"/>
-        <designable name="gV0-rV-07r"/>
+        <designable name="DbX-UA-zfb">
+            <size key="intrinsicContentSize" width="129.66666666666666" height="40.666666666666664"/>
+        </designable>
     </designables>
     <resources>
         <systemColor name="systemBackgroundColor">

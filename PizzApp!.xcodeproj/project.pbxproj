@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1E413429D2E45B0062A292 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E413329D2E45B0062A292 /* RecipeViewController.swift */; };
+		3A1E413629D2E9080062A292 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E413529D2E9080062A292 /* Recipe.swift */; };
 		3A8846B929CB3853002D05B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8846B829CB3853002D05B8 /* AppDelegate.swift */; };
 		3A8846BB29CB3853002D05B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8846BA29CB3853002D05B8 /* SceneDelegate.swift */; };
 		3A8846C029CB3853002D05B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8846BE29CB3853002D05B8 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A1E413329D2E45B0062A292 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		3A1E413529D2E9080062A292 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		3A8846B529CB3853002D05B8 /* PizzApp!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PizzApp!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8846B829CB3853002D05B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8846BA29CB3853002D05B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,11 +75,13 @@
 				3A8846BA29CB3853002D05B8 /* SceneDelegate.swift */,
 				3AB878F429D1BDAC00C56C48 /* StartViewController.swift */,
 				3A8846CC29CB3913002D05B8 /* MenuTableViewController.swift */,
+				3A1E413329D2E45B0062A292 /* RecipeViewController.swift */,
 				3A8846CE29CB3B28002D05B8 /* Ingredients.swift */,
 				3A8846BE29CB3853002D05B8 /* Main.storyboard */,
 				3A8846C129CB3855002D05B8 /* Assets.xcassets */,
 				3A8846C329CB3855002D05B8 /* LaunchScreen.storyboard */,
 				3A8846C629CB3855002D05B8 /* Info.plist */,
+				3A1E413529D2E9080062A292 /* Recipe.swift */,
 			);
 			path = "PizzApp!";
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 			files = (
 				3AB878F529D1BDAC00C56C48 /* StartViewController.swift in Sources */,
 				3A8846CF29CB3B28002D05B8 /* Ingredients.swift in Sources */,
+				3A1E413629D2E9080062A292 /* Recipe.swift in Sources */,
+				3A1E413429D2E45B0062A292 /* RecipeViewController.swift in Sources */,
 				3A8846B929CB3853002D05B8 /* AppDelegate.swift in Sources */,
 				3A8846BB29CB3853002D05B8 /* SceneDelegate.swift in Sources */,
 				3A8846CD29CB3913002D05B8 /* MenuTableViewController.swift in Sources */,
